@@ -1,0 +1,114 @@
+.navbar-dark .navbar-nav a.nav-link {
+    color: #ffffff;
+    font-size: 1.1em;
+  }
+  .dropdown-menu {
+    box-shadow: 0 3px 6px rgba(0, 0, 0, 0.16), 0 3px 6px rgba(0, 0, 0, 0.23);
+    border: none;
+    border-radius: 0;
+    padding: 0.7em;
+  }
+  @media only screen and (min-width: 992px) {
+    .dropdown:hover .dropdown-menu {
+      display: flex;
+    }
+    .dropdown-menu.show {
+      display: flex;
+    }
+  }
+  .dropdown-menu ul {
+    list-style: none;
+    padding: 0;
+  }
+  .dropdown-menu li .dropdown-item {
+    color: gray;
+    font-size: 1em;
+    padding: 0.5em 1em;
+  }
+  .dropdown-menu li .dropdown-item:hover {
+    background-color: #f1f1f1;
+  }
+  .dropdown-menu li:first-child a {
+    font-weight: bold;
+    font-size: 1.2em;
+    text-transform: uppercase;
+    color: #516beb;
+  }
+  .dropdown-menu li:first-child a:hover {
+    background-color: #f1f1f1;
+  }
+  @media only screen and (max-width: 992px) {
+    .dropdown-menu.show {
+      flex-wrap: wrap;
+      max-height: 350px;
+      overflow-y: scroll;
+    }
+  }
+  @media only screen and (min-width: 992px) and (max-width: 1140px) {
+    .dropdown:hover .dropdown-menu {
+      width: 40vw;
+      flex-wrap: wrap;
+    }
+  }
+
+
+.finish{
+    width: 100%;
+    background-color: rgb(9, 9, 9);
+
+    padding: 70px 100px;
+}
+.last h1{
+    color: gold;
+   line-height: 70px;
+   letter-spacing: 0.1px;
+}
+.last p{
+    color: rgb(232, 230, 230);
+    font-size: 15px;
+    letter-spacing: 1px;
+}
+.social1 a {
+	display: inline-flex;
+	justify-content: center;
+	align-items: center;
+	width: 50px;
+	height: 50px;
+	text-decoration: none;
+	color: rgb(28, 219, 225);
+	background: transparent;
+	border: 2px solid rgb(28, 219, 225);
+	border-radius: 50%;
+	font-size: 30px;
+	margin: 15px 15px 30px 0;
+
+}
+
+.social1 a:hover {
+	background: rgb(28, 219, 225);
+	color: #18191a;
+	box-shadow: 0 0 20px rgb(28, 219, 225);
+}
+.copy{
+    width: 100%;
+    background-color: rgb(9, 9, 9);
+    color: white;
+    padding-bottom: 100px;
+    font-size: 10px;
+    
+}
+.ending{
+    width: 100%;
+    background-color: rgb(9, 9, 9);
+    color: rgb(180, 177, 177);
+    display: flex;
+    justify-content: space-between;
+    padding: 20px 220px 10px 220px;
+}
+.ending p{
+    font-size: 12px;
+}
+.header{
+    color: grey;
+    padding: 40px 60px;
+ }

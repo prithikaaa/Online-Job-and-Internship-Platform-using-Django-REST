@@ -1,0 +1,388 @@
+{% extends "base.html" %}
+{% load static %}
+{% block content %}
+
+<style>
+  @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@200;300;400;500;600;700&display=swap');
+  /*@import url("https://cdnjs.cloudflare.com/ajax/libs/meyer-reset/2.0/reset.min.css")*/
+
+  .intro{
+  margin-top: 150px;
+  margin-left: 5%;
+  
+  align-items: center;
+  justify-content: center;
+  font-family: 'Poppins', sans-serif;}
+.wrapper{
+  display: flex;
+}
+.wrapper .static-txt{
+  color: #6c6b6b;
+  font-size: 60px;
+  font-weight: 400;
+}
+.wrapper .dynamic-txts{
+  margin-left: 10px;
+  height: 90px;
+  line-height: 90px;
+  overflow: hidden;
+}
+.dynamic-txts li{
+  list-style: none;
+  color: orange;
+  font-size: 60px;
+  font-weight: 500;
+  position: relative;
+  top: 0;
+  animation: slide 12s steps(4) infinite;
+}
+@keyframes slide {
+  100%{
+    top: -360px;
+  }
+}
+.dynamic-txts li span{
+  position: relative;
+  margin: 5px 0;
+  line-height: 90px;
+}
+.dynamic-txts li span::after{
+  content: "";
+  position: absolute;
+  left: 0;
+  height: 100%;
+  width: 100%;
+  background: #fff;
+  border-left: 2px solid orange;
+  animation: typing 3s steps(10) infinite;
+}
+@keyframes typing {
+  40%, 60%{
+    left: calc(100% + 30px);
+  }
+  100%{
+    left: 0;
+  }
+}
+  .intro p{ 
+    color: #595555;
+    margin-right: 42%;
+    margin-left: 20px;
+    margin-top: -10px;
+  }
+  .apply{
+    margin: 10px 40px;
+    padding: 10px;
+    background-image: linear-gradient(45deg, black,rgb(128, 128, 133),black);
+    color: #fff;
+    border-radius: 5px;
+  }
+  .target{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin: 80px 160px ;
+  }
+  .target-img{
+    justify-content: center;
+    text-align: center;
+    font-size: 12px;
+    background-color: rgb(227, 238, 248);
+   height: 150px;
+   width: 300px;
+   margin: 20px;
+   padding: 20px;
+    border-radius: 5px;
+  }
+
+@keyframes scroll {
+from {
+-webkit-transform: translateX(0);
+transform: translateX(0);
+}
+to {
+-webkit-transform: translateX(calc(-250px * 7));
+transform: translateX(calc(-250px * 7));
+}
+}
+.slider {
+background: pr;
+box-shadow: 0 10px 20px -5px rgba(0, 0, 0, 0.125);
+height: 100px;
+margin: auto;
+overflow: hidden;
+position: relative;
+width: 960px;
+}
+.slider::before, .slider::after {
+background: linear-gradient(to right, white 0%, rgba(255, 255, 255, 0) 100%);
+content: "";
+height: 100px;
+position: absolute;
+width: 200px;
+z-index: 2;
+}
+.slider::after {
+right: 0;
+top: 0;
+-webkit-transform: rotateZ(180deg);
+transform: rotateZ(180deg);
+}
+.slider::before {
+left: 0;
+top: 0;
+}
+.slider .slide-track {
+-webkit-animation: scroll 40s linear infinite;
+animation: scroll 40s linear infinite;
+display: flex;
+width: calc(250px * 14);
+}
+.slider .slide {
+height: 100px;
+width: 250px;
+}
+h4{
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  color: #424141;
+  margin-top: 150px;
+  margin-bottom: 40px;
+  
+}
+
+.calc{display: flex;
+margin: 200px 100px;
+align-items: center;
+padding-left: 100px;
+padding-right: 100px;
+border-style: solid;
+border-width: 0.5px;
+height: 300px;
+border-radius: 5px;
+box-shadow: 10px 10px 8px 10px #c5c3c3;
+background-color: #a7b3cb;
+}
+.calc .info{
+  margin-left: 100px;
+}
+.clcbtn{
+  color: #fff;
+  background-color: rgb(23, 160, 206);
+  border-radius: 10px;
+  border: none;
+  padding: 3px;
+  width: 100px;
+}
+.cardlet{
+  display: flex;
+  margin: 100px;
+  align-items: center;
+}
+.context{
+  background-image: linear-gradient(90deg, rgb(240, 217, 248),white);
+  padding: 40px;
+}
+
+</style>
+
+  <div class="intro">
+    <div class="wrapper">
+      <div class="static-txt">Get hired</div>
+      <ul class="dynamic-txts">
+        <li><span>Within 7 days</span></li>
+        <li><span>With Fast Response</span></li>
+        <li><span>By Top Companies</span></li>
+        <li><span>With lots of Options</span></li>
+      </ul>
+    </div>
+    <p>Are you among the top Software Engineer, Product Manager, Data Scientist or other Technical background?
+      If yes, this platform is for you.Let the worldwide leading technology companies compete to hire you.</p>
+      <button class="apply">
+        Apply to Join
+      </button>
+
+  </div>
+  <div class="target">
+    <div class="target-img">
+   <img src="/static/images/verify2.png" class="rounded-circle" alt="verify" style="height: 50px;">
+   <p><i class="bi bi-patch-check-fill" style="color: green;"></i> Once you submit your complete profile along with resume, we showcase you to leading technology startups.</p>
+  </div>
+  <div class="target-img">
+    <img src="/static/images/interview2.jpg" class="rounded-circle" alt="" style="height: 50px;">
+    <p><i class="bi bi-patch-check-fill" style="color: green;"></i> Companies start sending interview requests. Talk to only the ones you like.</p>
+  </div>
+  <div class="target-img">
+    <img src="/static/images/success.jpg" class="rounded-circle" alt="" style="height: 50px;">
+    <p><i class="bi bi-patch-check-fill" style="color: green;"></i> Compare your offers and accept the best one. Hired!</p>
+  </div>
+  </div>
+  <h4>OUR LEADING COMPANIES</h4>
+  <div class="slider">
+    
+    <div class="slide-track">
+    <div class="slide">
+    <img src="https://s3-us-west-2.amazonaws.com/s.cdpn.io/557257/1.png" height="100" width="250" alt="" />
+    </div>
+    <div class="slide">
+    <img src="https://s3-us-west-2.amazonaws.com/s.cdpn.io/557257/2.png" height="100" width="250" alt="" />
+    </div>
+    <div class="slide">
+    <img src="https://s3-us-west-2.amazonaws.com/s.cdpn.io/557257/3.png" height="100" width="250" alt="" />
+    </div>
+    <div class="slide">
+    <img src="https://s3-us-west-2.amazonaws.com/s.cdpn.io/557257/4.png" height="100" width="250" alt="" />
+    </div>
+    <div class="slide">
+    <img src="https://s3-us-west-2.amazonaws.com/s.cdpn.io/557257/5.png" height="100" width="250" alt="" />
+    </div>
+    <div class="slide">
+    <img src="https://s3-us-west-2.amazonaws.com/s.cdpn.io/557257/6.png" height="100" width="250" alt="" />
+    </div>
+    <div class="slide">
+    <img src="https://s3-us-west-2.amazonaws.com/s.cdpn.io/557257/7.png" height="100" width="250" alt="" />
+    </div>
+    <div class="slide">
+    <img src="https://s3-us-west-2.amazonaws.com/s.cdpn.io/557257/1.png" height="100" width="250" alt="" />
+    </div>
+    <div class="slide">
+    <img src="https://s3-us-west-2.amazonaws.com/s.cdpn.io/557257/2.png" height="100" width="250" alt="" />
+    </div>
+    <div class="slide">
+    <img src="https://s3-us-west-2.amazonaws.com/s.cdpn.io/557257/3.png" height="100" width="250" alt="" />
+    </div>
+    <div class="slide">
+    <img src="https://s3-us-west-2.amazonaws.com/s.cdpn.io/557257/4.png" height="100" width="250" alt="" />
+    </div>
+    <div class="slide">
+    <img src="https://s3-us-west-2.amazonaws.com/s.cdpn.io/557257/5.png" height="100" width="250" alt="" />
+    </div>
+    <div class="slide">
+    <img src="https://s3-us-west-2.amazonaws.com/s.cdpn.io/557257/6.png" height="100" width="250" alt="" />
+    </div>
+    <div class="slide">
+    <img src="https://s3-us-west-2.amazonaws.com/s.cdpn.io/557257/7.png" height="100" width="250" alt="" />
+    </div>
+    </div>
+    </div>
+    <div class="slider">
+      <div class="slide-track">
+      <div class="slide">
+      <img src="/static/images/dream11.png" height="100" width="200" alt="" />
+      </div>
+      <div class="slide">
+      <img src="/static/images/myntra.png" height="80" width="200" alt="" />
+      </div>
+      <div class="slide">
+      <img src="/static/images/phonepe.png" height="80" width="200" alt="" />
+      </div>
+      <div class="slide">
+      <img src="/static/images/zomato.png" height="100" width="200" alt="" />
+      </div>
+      <div class="slide">
+      <img src="/static/images/swiggy.png" height="70" width="200" alt="" />
+      </div>
+      <div class="slide">
+      <img src="/static/images/flipkart.jpg" height="70" width="200" alt="" />
+      </div>
+      <div class="slide">
+      <img src="/static/images/cocacola.png" height="50" width="200" alt="" />
+      </div>
+      <div class="slide">
+        <img src="/static/images/dream11.png" height="100" width="200" alt="" />
+        </div>
+        <div class="slide">
+        <img src="/static/images/myntra.png" height="80" width="200" alt="" />
+        </div>
+        <div class="slide">
+        <img src="/static/images/phonepe.png" height="80" width="200" alt="" />
+        </div>
+        <div class="slide">
+        <img src="/static/images/zomato.png" height="100" width="200" alt="" />
+        </div>
+        <div class="slide">
+        <img src="/static/images/swiggy.png" height="70" width="200" alt="" />
+        </div>
+        <div class="slide">
+        <img src="/static/images/flipkart.jpg" height="70" width="200" alt="" />
+        </div>
+        <div class="slide">
+        <img src="/static/images/cocacola.png" height="50" width="200" alt="" />
+        </div>
+      
+      </div>
+      </div>
+      <div class="calc">
+        <div class="calcimg"><img src="/static/images/calc-removebg-preview.png" height="200px" alt="calc"></div>
+        <div class="info">
+          <h5>Salary Calculator</h5>
+          <h1>Know Your Worth</h1>
+          <p>Submit your interest, skills and experience to know your current value. <br> We have the data. Research by job title, industry, and company size to find your salary range and be prepared to nail your negotiations.</p>
+          <button class="clcbtn">
+            Calculate
+          </button>
+    
+        </div>
+      </div>
+      <div class="cardcover">
+      <div class="cardlet">
+        <div class="context">
+          <h3>Lightning fast submissions, right from within Bullhorn</h3>
+          <p>Give your team back their time on creating candidate submittals. Simply pick a candidate from within Bullhorn and share a link with your clients. As easy as sharing a Dropbox folder or Google document.</p>
+          <button class="apply">
+            Apply to Join
+          </button>
+        </div>
+        <div class="context-img"><img src="/static/images/imgcard4-removebg-preview.png" alt=""></div>
+      </div>
+      <div class="cardlet">
+        <div class="context-img"><img src="/static/images/imgcard5-removebg-preview.png" height="300px" width="500px" alt=""></div>
+        <div class="context">
+          <h3>Why job seekers love us</h3>
+          <p><i class="bi bi-star"></i>  Unique jobs at startups and tech companies you can't find anywhere else. <br> <i class="bi bi-cursor"></i>  One click to apply and you're done. <br><i class="bi bi-globe"></i>  Connect directly with founders at top startups - no third party recruiters allowed. </p>
+          <button class="apply">
+            Apply to Join
+          </button>
+        </div>
+        
+      </div>
+      <div class="cardlet">
+        <div class="context">
+          <h3>Why recruiters love us</h3>
+          <p><i class="bi bi-person-add"></i>  millions of responsive and startup-ready candidates, with all the information you need to vet them. <br> <i class="bi bi-code-square"></i>  Everything you need to kickstart your recruiting - get job posts, company branding, and HR tools set up within 10 minutes, for free. <br><i class="bi bi-list-check"></i>   A free applicant tracking system, or free integration with any ATS you may already use.</p>
+          <button class="apply">
+            Apply to Join
+          </button>
+        </div>
+        <div class="context-img"><img src="/static/images/imgcard10-removebg-preview.png"  alt=""></div>
+      </div>
+    </div>
+    <div class="container" style="margin-top: 200px; margin-bottom: 300px;">
+      <div class="row">
+          <div class="col-md-12">
+              <h1>Trending Jobs at Companies <a href="{% url 'alljob' %}">>></a> </h1>
+              <hr>
+              <div class="row">
+                  {% for item in job %}
+                  <div class="col-md-4">
+                      <div class="card">
+                          <div class="card-body text-center">
+                              <div class="card-images">
+                                  <img src="{{ item.image.url }}" alt="company image" height="80" width="180">
+                              </div>
+                              <h6> {{ item.job_name }} </h6>
+                              <p>{{ item.salary }}</p>
+                          </div>
+                      </div>
+                  </div>
+                  {% endfor %}
+              </div>
+          </div>
+      </div>
+  </div>
+  {{ job }}
+    
+    
+
+{% endblock %}
